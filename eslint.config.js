@@ -17,6 +17,7 @@ export default antfu({
     react: true,
     typescript: true,
     vue: true,
+    astro: true,
 
     // `.eslintignore` is no longer supported in Flat config, use `ignores` instead
     ignores: [
