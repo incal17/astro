@@ -1,6 +1,5 @@
 # Gblog Astro
 
-
 ## TODO
 
 - Home
@@ -29,6 +28,6 @@
 - Footer
   - Home Page Layout
   - Post Detail Layout
-  - All Post Layout 
+  - All Post Layout
     - Paginate Support
   - Timeline Layout

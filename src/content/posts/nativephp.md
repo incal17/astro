@@ -51,14 +51,11 @@ NativePHP 的 Electron binding 的全部功能都是在这个前端插件 [elect
 8. 添加事件监听
 9. 添加 Terminate 事件
 
-
 ### Start Express API Server
 
 其中最核心的是通过 [expressjs](https://expressjs.com/) 框架启动一个 API Server，在这个 Server 中定义了许多和 APP 交付的 RESTful API；比如操作剪辑版、窗口管理、菜单管理等。当我们想在 Laravel 系统中操作 Electron APP 时，实际上操作的就是这些 API。
 
-
 ![file](https://images.godruoyi.com/posts/202307/25/fckOx54WOIfoGaFeSnAXaRtU7PlQRQPsgEfAbW4x.png)
-
 
 举个例子，在 Laravel 中你可以直接通过 Window Facade 快速的设置窗口大小，这个操作本质上会发起一个对 Express Api Server 的 POST 请求；Express Server 在收到这个请求后，会通过 Electron 的 BrowserWindow 对象设置 APP 窗口大小。
 
@@ -81,7 +78,7 @@ Express API Server 启动完成后，[Electron Plugin](https://github.com/Native
 
 ```
 php -S 127.0.0.1:$phpProt
-``` 
+```
 
 的形式来启动 PHP 服务。因为这个项目还未正式发布 1.0 版本，所以目前的这个临时过度我认为是可以接受的。期待后期社区添加专业的 Web Server 支持。
 
@@ -147,14 +144,13 @@ class DispatchEventFromAppController
 所有事件注册完成后，Electron APP 就算启动完成了。不过这并**不会**打开任何窗口，我们必须得在 Laravel 中注册你想打开的窗口。随着你执行 `native:install` 已经在 NativeAppServiceProvider 中注册了根目录 `/` 为默认打开的窗口，如果你的 PHP Server 运行在 `127.0.0.1:8080` 上，那 `http://127.0.0.1/` 就会是 Election APP 默认打包的页面，至于 Election 如何将一个网页打包为 APP 不在这篇文章的讨论范围内，我们只需要知道更定一个 URL 地址，Election 就能将它整个打包为一个 APP。
 
 我们也可以通过 Window 设置为默认打开的窗口为登陆页面，这将使用 `http://127.0.0.1/login`  路由为默认的打包窗口。
- 
+
 ```php
 // NativeAppServiceProvider.php
 Window::open()->url(url('/login'))->width(800)->height(400);
 ```
 
 ![file](https://images.godruoyi.com/posts/202307/25/trxWkNC4ENAFglMnNpH15QPo7wtAbWoXeJUOvR5I.png)
-
 
 ## Why NativePHP
 
