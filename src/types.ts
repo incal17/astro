@@ -4,3 +4,8 @@ export interface Site {
     domain: string
     description: string
 }
+
+export interface NavigationLink {
+    name: string
+    url: string
+}

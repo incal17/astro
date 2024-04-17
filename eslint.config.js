@@ -6,6 +6,11 @@ export default antfu({
         quotes: 'single', // or 'double'
     },
 
+    react: true,
+    typescript: true,
+    vue: true,
+    astro: true,
+
     rules: {
         'no-console': 'off',
         'curly': ['error', 'all'],
@@ -14,14 +19,4 @@ export default antfu({
 
     jsonc: false,
     yaml: false,
-    react: true,
-    typescript: true,
-    vue: true,
-    astro: true,
-
-    // `.eslintignore` is no longer supported in Flat config, use `ignores` instead
-    ignores: [
-        './fixtures',
-        // ...globs
-    ],
 })
