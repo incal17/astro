@@ -1,39 +1,18 @@
 ---
-const today = new Date();
+import FooterSocialLink from './ui/FooterSocialLink.astro'
+import Icon from './icons/icon.astro';
 ---
 
-<footer>
-    &copy; {today.getFullYear()} Your name here. All rights reserved.
-    <div class="social-links">
-        <a href="https://m.webtoo.ls/@astro" target="_blank">
-            <span class="sr-only">Follow Astro on Mastodon</span>
-        </a>
-        <a href="https://twitter.com/astrodotbuild" target="_blank">
-            <span class="sr-only">Follow Astro on Twitter</span>
-        </a>
-        <a href="https://github.com/withastro/astro" target="_blank">
-            <span class="sr-only">Go to Astro's GitHub repo</span>
-        </a>
+<footer class="w-full bg-neutral-300 dark:bg-neutral-900">
+    <div class="mx-auto w-full max-w-[85rem] px-4 py-8 sm:px-6 lg:px-10 lg:pt-10 2xl:max-w-screen-2xl">
+        <div class="flex justify-center">
+            <FooterSocialLink url=""><Icon name="xFooter" /></FooterSocialLink>
+            <FooterSocialLink url=""><Icon name="githubFooter" /></FooterSocialLink>
+        </div>
+        <script>
+            const year = new Date().getFullYear();
+            const element = document.getElementById("current-year");
+            element!.innerText = year.toString();
+        </script>
     </div>
 </footer>
-<style>
-    footer {
-        padding: 2em 1em 6em 1em;
-        background: linear-gradient(var(--gray-gradient)) no-repeat;
-        color: rgb(var(--gray));
-        text-align: center;
-    }
-    .social-links {
-        display: flex;
-        justify-content: center;
-        gap: 1em;
-        margin-top: 1em;
-    }
-    .social-links a {
-        text-decoration: none;
-        color: rgb(var(--gray));
-    }
-    .social-links a:hover {
-        color: rgb(var(--gray-dark));
-    }
-</style>

@@ -8,8 +8,8 @@ export const SITE: Site = {
 }
 
 export const NavigationLinks: NavigationLink[] = [
-    { name: 'Home', url: '/' },
-    { name: 'About', url: '/about' },
+    { name: 'Posts', url: '/posts' },
     { name: 'Categories', url: '/categories' },
+    { name: 'About', url: '/about' },
     { name: 'Timeline', url: '/timeline' },
 ]
