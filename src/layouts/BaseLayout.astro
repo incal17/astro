@@ -20,12 +20,12 @@ const {
         <title>{title}</title>
         <BaseHead title={title} description="description" />
         <script is:inline>
-            if (localStorage.getItem("hs_theme") === "dark"
-                || (!("hs_theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-                document.documentElement.classList.add("dark");
-            } else {
-                document.documentElement.classList.remove("dark");
-            }
+            // if (localStorage.getItem("hs_theme") === "dark"
+            //     || (!("hs_theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+            //     document.documentElement.classList.add("dark");
+            // } else {
+            //     document.documentElement.classList.remove("dark");
+            // }
         </script>
         <script is:inline src="/vendor/lenis/lenis1.0.42.min.js"></script>
         <script is:inline>

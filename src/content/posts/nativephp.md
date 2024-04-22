@@ -3,6 +3,7 @@ title: 'Native PHP'
 description: 'Native PHP'
 pubDate: 'Jul 25 2021'
 heroImage: '/blog-placeholder-2.jpg'
+cardImage: 'https://images.godruoyi.com/logos/202401/31/QczVNWs0YPOPfntslMjyHj6WSovweesFXsdZuNKL.jpeg'
 ---
 
 这次的 LaraconUS 发布很多很有意思的项目，比如我在[这里](https://twitter.com/godruoyi/status/1681875841603735552?s=20)提到的 Laravel Prompts/Laravel Folio/Laravel Herd/Pest 2 以及 ~[beyondcode](https://twitter.com/beyondcode)~ 这两天发布的比较重量级的产品 —— NativePHP 等。
