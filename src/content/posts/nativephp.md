@@ -3,6 +3,7 @@ title: 'Native PHP'
 description: 'Native PHP'
 pubDate: 'Jul 25 2021'
 heroImage: '/blog-placeholder-2.jpg'
+category: 'laravel'
 cardImage: 'https://images.godruoyi.com/logos/202401/31/QczVNWs0YPOPfntslMjyHj6WSovweesFXsdZuNKL.jpeg'
 ---
 

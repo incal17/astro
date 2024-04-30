@@ -1,37 +1,46 @@
 ---
+import { getCollection } from 'astro:content'
+import type { CollectionEntry } from 'astro:content'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import MainSection from '@components/blocks/MainSection.astro'
+import BlogCategory from '@components/blog/BlogCategory.astro'
+import { Categories } from '../config'
+import { timeago } from '../support/time'
+
+const postMap: Map<string, CollectionEntry<'posts'>[]> = (await getCollection('posts')).sort(
+    (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+).reduce((acc, obj) => {
+    let posts = acc.get(obj.data.category)
+    if (!posts) {
+        posts = []
+    }
+    posts.push(obj)
+
+    acc.set(obj.data.category, posts)
+
+    return acc
+}, new Map<string, CollectionEntry<'posts'>[]>())
 ---
 
-<BaseLayout title="x">
-    <MainSection title="Categories" subTitle="List all categories that I interested and want con" />
+<BaseLayout title="Categories">
+    <MainSection title="Categories" subTitle="List all the categories that I am interested, including some that haven't been updated recently." />
 
-<section class="mx-auto mt-10 px-4 py-10 sm:px-6 lg:px-8 lg:pt-10 lg:py-14 2xl:max-w-full">
-  <div class="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-6 md:gap-10">
-    <!-- Card -->
-    <a href="" class="size-full bg-neutral-100 shadow-lg rounded-lg p-5 dark:bg-neutral-900/30 group">
-      <div class="flex justify-between">
-          <div class="flex justify-center gap-x-4 mb-3 items-center">
-              <svg class="flex-shrink-0 size-6 text-neutral-600 group-hover:text-orange-400 dark:text-neutral-300 dark:group-hover:text-orange-300" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" /><circle cx="17.5" cy="10.5" r=".5" /><circle cx="8.5" cy="7.5" r=".5" /><circle cx="6.5" cy="12.5" r=".5" /><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" /></svg>
-        <div class="flex-shrink-0">
-          <h3 class="text-lg font-semibold tracking-tight text-neutral-600 group-hover:text-orange-400 dark:text-neutral-300 dark:group-hover:text-orange-300">Build your portfolio</h3>
+
+
+    <section class="mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:pt-10 lg:py-14 2xl:max-w-full">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-6 md:gap-10">
+            {
+
+                Categories.map(c => (
+                    <BlogCategory
+                        slug={c.slug}
+                        title={c.title}
+                        description={c.description}
+                        count={postMap.get(c.slug)?.length ?? 0}
+                        publishDate={timeago(postMap.get(c.slug)?.[0]?.data?.pubDate)}
+                    />
+                ))
+            }
         </div>
-          </div>
-          <div class="flex justify-end">
-              <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs bg-gray-100 text-gray-800 rounded-md dark:bg-neutral-500/20 dark:text-neutral-400">
-        <svg class="flex-shrink-0 size-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-          <polyline points="16 7 22 7 22 13"></polyline>
-        </svg>
-        37.3%
-      </span>
-          </div>
-      </div>
-      <p class="block text-neutral-500 group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400">The simplest way to keep your portfolio always up-to-date.</p>
-    </a>
-    <!-- End Card -->
-  </div>
-</section>
-<!-- End Icon Blocks -->
-
+    </section>
 </BaseLayout>

@@ -3,6 +3,7 @@ title: 'Third post'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 15 2022'
 heroImage: '/blog-placeholder-2.jpg'
+category: 'mysql'
 cardImage: 'https://images.godruoyi.com/logos/202105/06/DS3Uh72lIFSfAnI1c7neESOFSZHnzMsVlOpGs9CS.jpeg'
 ---
 

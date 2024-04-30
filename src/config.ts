@@ -1,4 +1,4 @@
-import type { NavigationLink, PickUpPost, Site } from './types.ts'
+import type { Category, NavigationLink, PickUpPost, Site } from './types.ts'
 
 export const SITE: Site = {
     author: 'Godruoyi',
@@ -48,6 +48,18 @@ export const PickUpPosts: PickUpPost[] = [
         title: '刷抖音',
         slug: '/',
     },
+]
+
+export const Categories: Category[] = [
+    { title: 'PHP', slug: 'php', description: 'PHP is a popular general-purpose scripting language that is especially suited to web development.' },
+    { title: '生活 💃', slug: 'life', description: '柴米油盐，就是生活，养只喵喵，做个好菜，打个游戏，再在沙发敦伟大友谊' },
+    { title: 'Laravel 🐛', slug: 'laravel', description: '最优雅的 PHP 框架' },
+    { title: '我的工具箱 🪜', slug: ' tool', description: '整个 coding 生涯都要一直不停的折腾，停止折腾后，就老了。' },
+    { title: 'MySQL', slug: 'mysql', description: 'MySQL is an open-source relational database management system (RDBMS).' },
+    { title: '二愣的小书屋 🔖', slug: 'books', description: '「生活总是这样，不能让人处处都满意。但我们还要热情地活下去」' },
+    { title: 'Nginx 🐕‍🦺', slug: 'nginx', description: '高性能的 HTTP 和反向代理 web 服务器，奈何反向代理的服务太慢。' },
+    { title: 'kubernetes 💩', slug: 'kubernetes', description: 'Kubernetes 是一个开源系统，用于自动化部署、扩展和管理容器化应用程序。' },
+    { title: 'Go', slug: 'golang', description: 'Go 语言的词法分析与语法分析 & 折腾下 Go 编译原理' },
 ]
 
 export const FooterLinks = [

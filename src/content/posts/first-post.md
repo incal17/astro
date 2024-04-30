@@ -3,6 +3,7 @@ title: 'First post'
 description: 'Lorem ipsum dolor sit ametLorem ipsum dolor sit eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies ipsum dolor sit ametLorem ipsum dolor sit ametLorem ipsum dolor sit amet'
 pubDate: 'Jul 08 2022'
 heroImage: '/blog-placeholder-3.jpg'
+category: 'life'
 cardImage: 'https://images.godruoyi.com/logos/202011/20/ZUZkJL1ik3SrCe2b1rf8obtmXlNnpEi7loouJ6mv.jpeg'
 ---
 

@@ -14,3 +14,10 @@ export interface PickUpPost {
     title: string
     slug: string
 }
+
+export interface Category {
+    title: string
+    slug: string
+    description: string
+    icon?: string
+}

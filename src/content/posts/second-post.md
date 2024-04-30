@@ -3,6 +3,7 @@ title: 'Second post'
 description: 'Lorem ipsum dolor sit amet'
 pubDate: 'Jul 22 2022'
 heroImage: '/blog-placeholder-4.jpg'
+category: 'php'
 cardImage: 'https://images.godruoyi.com/logos/202110/29/NQ2XNWNbIBlIRcQuE31zArmpGr7X9N0y5M99LnSb.jpeg'
 ---
 
