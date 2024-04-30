@@ -1,4 +1,4 @@
-import type { NavigationLink, PickUpPost, Site } from './types.ts'
+import type { NavigationLink, PickUpPost, Site, User } from './types.ts'
 
 export const SITE: Site = {
     author: 'Godruoyi',
@@ -13,6 +13,30 @@ export const NavigationLinks: NavigationLink[] = [
     { name: 'Timeline', url: '/timeline' },
     { name: 'About', url: '/about' },
     { name: 'Friends', url: '/friends' },
+]
+
+export const Friends: User[] = [
+    {
+        avatar: 'https://tcxx.info/wp-content/themes/StarryW/images/bg/me.jpg',
+        social: { twitter: 'Tiancaixinxin', blog: 'https://tcxx.info/', github: 'TCXX' },
+        title: '我不是天才，我只是甜菜。',
+        name: '甜欣屋',
+        description: '技术圈的欧阳娜娜，旅居美国硅谷，生命不息作死不止，探索人生无限可能，女权主义者，希望世界和平',
+    },
+    {
+        avatar: 'https://avatars.githubusercontent.com/u/21162238?v=4',
+        social: { twitter: 'Tiancaixinxin', blog: 'https://www.xqy404.com/', github: 'QuentinHsu' },
+        title: 'Web Developer',
+        name: 'Quentin Hau',
+        description: '人生本就過的不愉快 那就來點羅曼蒂克',
+    },
+    {
+        avatar: 'https://avatars.githubusercontent.com/u/6493255?v=4',
+        social: { twitter: 'draven0xff', blog: 'https://draveness.me/', github: 'draveness' },
+        title: '一个工程师',
+        name: 'Draven',
+        description: 'Go 语言设计与实现作者，偶像',
+    },
 ]
 
 export const PickUpPosts: PickUpPost[] = [
