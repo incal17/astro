@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { formatDate } from '../../support/time'
 
 const { blog } = Astro.props
 
@@ -13,34 +14,19 @@ interface Props {
     href={`/posts/${blog.slug}/`}
     data-astro-prefetch
 >
-    <div class="relative h-[350px] w-full flex-shrink-0 overflow-hidden rounded-xl before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-neutral-900/[.7]">
+    <div class="relative h-[260px] w-full flex-shrink-0 overflow-hidden rounded-xl before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-neutral-900/[.7]">
         <img
-            class="absolute h-[350px] start-0 top-0 size-full object-cover transition duration-500 group-hover:scale-110"
+            class="absolute w-full start-0 top-0 size-full object-cover transition duration-500 group-hover:scale-110"
             src={blog.data.cardImage}
             alt={blog.data.title}
             draggable="false"
             loading="eager"
         />
     </div>
-    <div class="absolute inset-x-0 top-0 z-10">
-        <div class="flex h-full flex-col p-4 sm:p-6">
-             <div class="flex items-center">
-                <div class="ms-2.5 sm:ms-4">
-                    <h4 class="font-bold text-neutral-50">
-                        Godruoyi
-                    </h4>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="absolute inset-x-0 bottom-0 z-10">
-        <div class="flex h-full flex-col p-4 sm:p-6">
-            <h3 class="text-balance text-lg font-bold text-neutral-50 group-hover:text-neutral-50/[.8] sm:text-3xl">
-                {blog.data.title}
-            </h3>
-            <p class="mt-2 text-pretty text-neutral-50/[.8]">
-                {blog.data.description}
-            </p>
-        </div>
-    </div>
+    <h3 class="mt-2 text-xl font-bold text-neutral-800 group-hover:text-orange-400 dark:text-neutral-200 dark:group-hover:text-orange-300">
+        {blog.data.title}
+    </h3>
+    <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400 dark:group-hover:text-neutral-500">
+        {formatDate(blog.data.pubDate)}
+    </p>
 </a>

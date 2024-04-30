@@ -1,52 +1,55 @@
 ---
 import { getCollection } from 'astro:content'
 import type { CollectionEntry } from 'astro:content'
-import BaseLayout from '../layouts/BaseLayout.astro'
-import HeroSection from '../components/blocks/HeroSection.astro'
-import BlogInsight from '../components/blog/BlogInsight.astro'
-import HeroSectionAlt from '../components/blocks/HeroSectionAlt.astro'
-import PrimaryCTA from '../components/buttons/PrimaryCTA.astro'
+import BaseLayout from '@layouts/BaseLayout.astro'
+import HeroSection from '@components/blocks/HeroSection.astro'
+import BlogInsight from '@components/blog/BlogInsight.astro'
+import HeroSectionAlt from '@components/blocks/HeroSectionAlt.astro'
+import FeaturesSection from '@components/blocks/FeaturesSection.astro'
+import BlogPuckUp from '@components/blog/BlogPuckUp.astro'
+import ponyo from '@images/ponyo-2.png'
 
 const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
     (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 ).slice(0, 3);
 ---
 
-<BaseLayout title="xxx">
+<BaseLayout title="Home">
     <HeroSection
-        title=`Hi, My name is <span class="text-yellow-500 dark:text-yellow-400">Godruoyi</span>`
-        subTitle="welcome to my website, here you arewelcome to my website, here you arewelcome to my website, here you arewelcome to my website, here you arewelcome to my website, here you are"
-        primaryBtn="Export Posts"
-        primaryBtnURL="/products"
-        src="https://raw.githubusercontent.com/dvjn/wakatime-charts/master/images/wakatime_weekly_language_stats.svg"
+        title=`Hello, <span class="text-yellow-500 dark:text-yellow-400">Godruoyi</span>`
+        subTitle="没有尝试又怎么会，人生下来就会绕没有尝试又怎么会，人生下来就会绕没有尝试又怎么会，人生下来就会绕没有尝试又怎么会，人生下来就会绕"
+        primaryBtn="Explore Posts"
+        primaryBtnURL="/posts"
+        secondaryBtn="secondaryBtn"
+        secondaryBtnURL="/x"
+        src={ponyo}
         alt="heroImage"
     />
 
+    <FeaturesSection />
+
     <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
         <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
-          <h2 class="text-2xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
-            Latest Articles
-          </h2>
-      <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
-        Quam hic dolore cumque voluptate rerum beatae et quae, tempore sunt, debitis dolorum officia aliquid explicabo? Excepturi, voluptate?
-      </p>
-    </div>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        posts.map(b => (
-          <BlogInsight blog={b} />
-        ))
-      }
-    </div>
-    <div class="mx-auto max-w-2xl">
-            <div class="mt-7 grid w-full gap-3 sm:inline-flex md:flex md:justify-center">
-                <PrimaryCTA title="All Posts" url="/posts" />
-            </div>
-    </div>
-  </section>
+            <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
+                Latest Articles
+            </h2>
+            <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
+                Quam hic dolore cumque voluptate rerum beatae et quae, tempore sunt, debitis dolorum officia aliquid explicabo? Excepturi, voluptate?
+            </p>
+        </div>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {
+                posts.map(b => (
+                    <BlogInsight blog={b} />
+                ))
+            }
+        </div>
+    </section>
+
+    <BlogPuckUp />
 
     <HeroSectionAlt
-        title="Let's Build Together"
+        title="Fellow me on GitHub"
         subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
         url="https://github.com/mearashadowfax/ScrewFast"
     />

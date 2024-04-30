@@ -1,31 +1,29 @@
 ---
 import BaseHead from '@components/BaseHead.astro'
-import Header from '@components/Header.astro'
 import Footer from '@components/Footer.astro'
+import Header from '@components/Header.astro'
+import { SITE } from '../config'
 
 interface Props {
     title: string
     lang?: string
 }
 
-const {
-    title,
-    lang = 'en',
-} = Astro.props
-
+const { title, lang = 'en' } = Astro.props
+const normalizeTitle = title === '' ? SITE.title : `${title} - ${SITE.title}`
 ---
 
 <html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
     <head>
-        <title>{title}</title>
-        <BaseHead title={title} description="description" />
+        <title>{normalizeTitle}</title>
+        <BaseHead title={normalizeTitle} description="description" />
         <script is:inline>
-            // if (localStorage.getItem("hs_theme") === "dark"
-            //     || (!("hs_theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-            //     document.documentElement.classList.add("dark");
-            // } else {
-            //     document.documentElement.classList.remove("dark");
-            // }
+            if (localStorage.getItem("hs_theme") === "dark"
+                || (!("hs_theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+                document.documentElement.classList.add("dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+            }
         </script>
         <script is:inline src="/vendor/lenis/lenis1.0.42.min.js"></script>
         <script is:inline>

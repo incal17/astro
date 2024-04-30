@@ -9,3 +9,8 @@ export interface NavigationLink {
     name: string
     url: string
 }
+
+export interface PickUpPost {
+    title: string
+    slug: string
+}

@@ -1,0 +1,29 @@
+---
+import Icon from '../icons/icon.astro'
+import { PickUpPosts } from '../../config'; ---
+
+<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
+    <div class="grid md:grid-cols-5 gap-10">
+        <div class="md:col-span-2">
+            <div class="max-w-xs">
+                <h2 class="text-3xl font-bold text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight">
+                    Pick up <span class="text-yellow-500 dark:text-yellow-400">Posts</span>
+                </h2>
+                <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">Here are the best articles I written, and if you also like them, I will be even happier.Here are the best articles I written, and if you also like them, I will be even happier.Here are the best articles I written, and if you also like them, I will be even happier.</p>
+            </div>
+        </div>
+
+        <div class="md:col-span-3">
+            <div class="divide-y divide-neutral-400 dark:divide-neutral-700">
+                {PickUpPosts.map((b, index) => (
+                    <div class=`pb-3 ${index !== 0 ? 'pt-3' : ''}`>
+                        <a href=`/posts/${b.slug}` class="group inline-flex items-center justify-between gap-x-3 w-full md:text-lg font-semibold text-start text-gray-800 rounded-lg transition hover:text-gray-500 dark:text-neutral-200 dark:hover:text-neutral-400">
+                            {b.title}
+                            <Icon name="arrowRight" />
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+</section>

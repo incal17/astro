@@ -2,28 +2,26 @@
 import { getCollection } from 'astro:content'
 import type { CollectionEntry } from 'astro:content'
 import BaseLayout from '@layouts/BaseLayout.astro'
-import BlogCard from '@components/blog/BlogCard.astro'
 import MainSection from '@components/blocks/MainSection.astro'
+import BlogRecentCard from '@components/blog/BlogRecentCard.astro'
+import BlogSelectedArticle from '@components/blog/BlogSelectedArticle.astro'
 
 const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
     (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
-
 ---
 
 <BaseLayout title="Hello">
     <MainSection
-        title="All Posts"
-        subTitle="I write anything i want write, am so happy if same articel can help with you."
+        title="Write you want"
+        subTitle="Life may not always bring happiness to everyone, but we still need to live passionately"
         btnExists={true}
-        btnTitle="Timeline"
+        btnTitle="All Posts"
         btnURL="/timeline"
     />
 
-    <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-10 2xl:max-w-full">
-        <div class="grid gap-6 md:grid-cols-2">
-            {posts.map(b => <BlogCard blog={b} />)}
-        </div>
-    </section>
+    <BlogRecentCard blogs={posts} />
+
+    <BlogSelectedArticle posts={posts} />
 </BaseLayout>
 
