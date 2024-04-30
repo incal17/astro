@@ -1,0 +1,38 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro'
+import { type CollectionEntry, getCollection } from 'astro:content'
+import MainSection from '@components/blocks/MainSection.astro'
+import BlogCard from '@components/blog/BlogCard.astro'
+
+export async function getStaticPaths() {
+    const categories = await getCollection('categories')
+    return categories.map(category => ({
+        params: { slug: category.slug },
+        props: { category },
+    }))
+}
+
+const { category } = Astro.props
+
+const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
+    (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+).filter((b) => {
+    return b.data.category === category.slug
+});
+---
+
+<BaseLayout>
+    <MainSection
+        title={category.data.title}
+        subTitle={category.data.description}
+        btnExists={true}
+        btnTitle="Go to List"
+        btnURL="/categories"
+    />
+
+    <section class="mx-auto max-w-[85rem] px-4 py-8 sm:px-6 lg:px-8 mb-10 2xl:max-w-full">
+        <div class="grid gap-6 grid-cols-1 lg:grid-cols-3 sm:grid-cols-2">
+            {posts.map(b => <BlogCard blog={b} />)}
+        </div>
+    </section>
+</BaseLayout>

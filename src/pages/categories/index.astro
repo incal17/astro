@@ -4,8 +4,7 @@ import type { CollectionEntry } from 'astro:content'
 import BaseLayout from '@layouts/BaseLayout.astro'
 import MainSection from '@components/blocks/MainSection.astro'
 import BlogCategory from '@components/blog/BlogCategory.astro'
-import { Categories } from '../config'
-import { timeago } from '../support/time'
+import { timeago } from '../../support/time'
 
 const postMap: Map<string, CollectionEntry<'posts'>[]> = (await getCollection('posts')).sort(
     (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -20,22 +19,21 @@ const postMap: Map<string, CollectionEntry<'posts'>[]> = (await getCollection('p
 
     return acc
 }, new Map<string, CollectionEntry<'posts'>[]>())
+
+const categories = await getCollection('categories');
 ---
 
 <BaseLayout title="Categories">
     <MainSection title="Categories" subTitle="List all the categories that I am interested, including some that haven't been updated recently." />
 
-
-
     <section class="mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:pt-10 lg:py-14 2xl:max-w-full">
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-6 md:gap-10">
             {
-
-                Categories.map(c => (
+                categories.map(c => (
                     <BlogCategory
                         slug={c.slug}
-                        title={c.title}
-                        description={c.description}
+                        title={c.data.title}
+                        description={c.data.description}
                         count={postMap.get(c.slug)?.length ?? 0}
                         publishDate={timeago(postMap.get(c.slug)?.[0]?.data?.pubDate)}
                     />
