@@ -10,6 +10,7 @@ const posts = defineCollection({
         cardImage: z.string(),
         category: z.string(),
         pubDate: z.coerce.date(),
+        tags: z.array(z.string()).optional(),
         updatedDate: z.coerce.date().optional(),
         heroImage: z.string().optional(),
     }),
