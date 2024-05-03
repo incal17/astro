@@ -24,6 +24,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.13.3",
+    "@tailwindcss/typography": "^0.5.13",
     "astro-loading-indicator": "^0.4.0",
     "eslint": "^9.0.0",
     "eslint-plugin-astro": "^0.34.0",
@@ -31,6 +32,7 @@
     "eslint-plugin-react": "^7.34.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "mysql2": "^3.9.7",
     "preline": "^2.1.0",
     "timeago.js": "^4.0.2"
   }

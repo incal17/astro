@@ -8,4 +8,13 @@ import { SITE } from './src/config.ts'
 export default defineConfig({
     site: SITE.domain,
     integrations: [mdx(), sitemap(), tailwind(), react()],
+    markdown: {
+        shikiConfig: {
+            themes: {
+                light: 'material-theme-lighter',
+                dark: 'one-dark-pro',
+            },
+            wrap: false,
+        },
+    },
 })
