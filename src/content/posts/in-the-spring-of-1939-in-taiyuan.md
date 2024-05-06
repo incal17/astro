@@ -5,7 +5,7 @@ pubDate: "2022-09-19 12:48:32"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202209/19/Ay48gb4P2DDRkka9p4t4TFrj3dImBHfS813jnPwB.jpeg"
 tags: ["life"]
-oldViewCount: "2292"
+oldViewCount: 2293
 oldKeywords: ["life"]
 ---
 

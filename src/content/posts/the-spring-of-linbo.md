@@ -5,7 +5,7 @@ pubDate: "2020-11-03 04:06:42"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202011/03/qe525sBIiMmDiEx4QQfDBrseDHJNTyZ4SZCAK0q8.png"
 tags: ["life"]
-oldViewCount: "2668"
+oldViewCount: 2668
 oldKeywords: ["四个春天,电影,纪录片,godruoyi"]
 ---
 

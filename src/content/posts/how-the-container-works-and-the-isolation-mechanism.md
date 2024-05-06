@@ -5,7 +5,7 @@ pubDate: "2018-10-21 11:50:15"
 category: "kubernetes"
 cardImage: "https://images.godruoyi.com/logos/201903/26/_1553621604_f8zlXLDPQD.jpg"
 tags: ["kubernetes"]
-oldViewCount: "7359"
+oldViewCount: 7360
 oldKeywords: ["null"]
 ---
 

@@ -5,7 +5,7 @@ pubDate: "2020-03-07 11:19:10"
 category: "books"
 cardImage: "https://images.godruoyi.com/logos/202003/07/_1583579912_ujZ48wWtGg.jpeg"
 tags: ["books"]
-oldViewCount: "2187"
+oldViewCount: 2187
 oldKeywords: ["null"]
 ---
 

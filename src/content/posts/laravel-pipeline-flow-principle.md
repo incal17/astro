@@ -5,7 +5,7 @@ pubDate: "2018-04-04 07:39:04"
 category: "laravel"
 cardImage: "https://images.godruoyi.com/logos/201903/26/_1553621473_pZwNEZykbY.jpeg"
 tags: ["laravel"]
-oldViewCount: "2960"
+oldViewCount: 2960
 oldKeywords: ["null"]
 ---
 

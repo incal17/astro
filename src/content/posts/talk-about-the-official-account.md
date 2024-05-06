@@ -5,7 +5,7 @@ pubDate: "2021-08-19 05:37:06"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202108/19/m2FL2F5rf7fTPCr35lvB4sDhjNH5wBNWx7fBXPzw.jpeg"
 tags: ["life"]
-oldViewCount: "3355"
+oldViewCount: 3355
 oldKeywords: ["go,公众号,博客"]
 ---
 

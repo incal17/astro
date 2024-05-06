@@ -5,7 +5,7 @@ pubDate: "2018-06-21 15:26:19"
 category: "nginx"
 cardImage: "https://images.godruoyi.com/logos/201903/26/_1553621543_3ivCUwq5C7.jpg"
 tags: ["nginx"]
-oldViewCount: "4189"
+oldViewCount: 4189
 oldKeywords: ["null"]
 ---
 

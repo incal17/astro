@@ -5,7 +5,7 @@ pubDate: "2021-03-22 07:02:41"
 category: "golang"
 cardImage: "https://images.godruoyi.com/logos/202103/22/Di9Nbpo4SaCK0g9l0tCU1xFRZeJjNZA0Mrx4koA3.jpeg"
 tags: ["golang"]
-oldViewCount: "4240"
+oldViewCount: 4240
 oldKeywords: ["go语言,词法分析,语法分析,编译原理,go语言编译原理"]
 ---
 

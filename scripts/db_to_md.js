@@ -79,7 +79,7 @@ pubDate: "${this.formatDate(post.pubDate)}"
 category: "${post.category.slug}"
 cardImage: "${post.banner}"
 tags: ["${post.category.slug}"]
-oldViewCount: "${post.viewCount}"
+oldViewCount: ${post.viewCount}
 oldKeywords: ["${post.keyword}"]
 ---
 

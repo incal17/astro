@@ -5,7 +5,7 @@ pubDate: "2020-08-24 15:02:22"
 category: "php"
 cardImage: "https://images.godruoyi.com/logos/202008/25/_1598318282_jY8TmSXOFP.jpeg"
 tags: ["php"]
-oldViewCount: "2646"
+oldViewCount: 2646
 oldKeywords: ["null"]
 ---
 

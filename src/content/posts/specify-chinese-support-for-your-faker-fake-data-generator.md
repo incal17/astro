@@ -5,7 +5,7 @@ pubDate: "2018-07-27 09:13:30"
 category: "laravel"
 cardImage: "https://images.godruoyi.com/logos/201908/31/_1567223790_ADv0UbdWE5.png"
 tags: ["laravel"]
-oldViewCount: "3765"
+oldViewCount: 3765
 oldKeywords: ["laravel-faker,laravel中文支持"]
 ---
 

@@ -5,7 +5,7 @@ pubDate: "2018-04-04 05:09:16"
 category: "laravel"
 cardImage: "https://images.godruoyi.com/logos/201903/26/_1553621438_lPB7Pmr00g.png"
 tags: ["laravel"]
-oldViewCount: "2370"
+oldViewCount: 2370
 oldKeywords: ["Laravel,response macro,响应宏"]
 ---
 

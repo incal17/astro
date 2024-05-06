@@ -5,7 +5,7 @@ pubDate: "2021-05-06 02:40:42"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202105/06/DS3Uh72lIFSfAnI1c7neESOFSZHnzMsVlOpGs9CS.jpeg"
 tags: ["life"]
-oldViewCount: "2538"
+oldViewCount: 2538
 oldKeywords: ["三轮车,田园生活,重庆"]
 ---
 

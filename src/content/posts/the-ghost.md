@@ -5,7 +5,7 @@ pubDate: "2021-10-11 02:34:06"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202110/11/uKXz9c9tt3coLlZ47KcyS5WwA8dRN3LRDthMtc7j.jpeg"
 tags: ["life"]
-oldViewCount: "3314"
+oldViewCount: 3314
 oldKeywords: ["回忆鲁迅先生,萧红"]
 ---
 

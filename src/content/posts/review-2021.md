@@ -5,7 +5,7 @@ pubDate: "2022-01-28 10:31:19"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202201/28/MAycsXVXJpbFzBfdP92MJ5s9vD1LipBHIiPxw1Qm.jpeg"
 tags: ["life"]
-oldViewCount: "3569"
+oldViewCount: 3570
 oldKeywords: ["年终总结,2021,godruoyi,remote"]
 ---
 

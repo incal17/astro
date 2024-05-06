@@ -5,7 +5,7 @@ pubDate: "2019-05-22 12:03:18"
 category: "books"
 cardImage: "https://images.godruoyi.com/logos/201905/22/_1558526592_DaadbXpCjI.jpg"
 tags: ["books"]
-oldViewCount: "2396"
+oldViewCount: 2396
 oldKeywords: ["null"]
 ---
 

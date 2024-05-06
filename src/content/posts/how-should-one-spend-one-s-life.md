@@ -5,7 +5,7 @@ pubDate: "2021-06-03 03:22:32"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202106/03/TIECszb8kMWX3vl5FhWbxpLbR2i9grEcABtYRE7J.png"
 tags: ["life"]
-oldViewCount: "3533"
+oldViewCount: 3533
 oldKeywords: ["连波,柯察金"]
 ---
 

@@ -5,7 +5,7 @@ pubDate: "2020-11-04 05:17:23"
 category: "laravel"
 cardImage: "https://images.godruoyi.com/logos/202011/04/35TCzBa3CNP65B3TV3oEWIRQKhSeoj0SCicxmY2z.png"
 tags: ["laravel"]
-oldViewCount: "2636"
+oldViewCount: 2636
 oldKeywords: ["bus,even,dispatcher,dispatch,laravel"]
 ---
 

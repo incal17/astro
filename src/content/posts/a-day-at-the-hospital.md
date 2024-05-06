@@ -5,7 +5,7 @@ pubDate: "2020-11-23 09:49:54"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202011/23/6P95vUcquiealnMNWPJMmmLcH9RG8hWZ75Qo9HE4.jpeg"
 tags: ["life"]
-oldViewCount: "2971"
+oldViewCount: 2971
 oldKeywords: ["连波"]
 ---
 

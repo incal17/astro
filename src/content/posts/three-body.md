@@ -5,7 +5,7 @@ pubDate: "2021-05-20 09:53:37"
 category: "books"
 cardImage: "https://images.godruoyi.com/logos/202105/20/xOw3PVdihEbxlJfIu0KoQrRIu1stJfWI2BIUv707.jpeg"
 tags: ["books"]
-oldViewCount: "4290"
+oldViewCount: 4290
 oldKeywords: ["三体,三体世界,蝗虫,你是一颗独立向上的力量"]
 ---
 

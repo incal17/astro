@@ -5,7 +5,7 @@ pubDate: "2021-05-17 06:11:42"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202105/17/1JNl1w2oiX8z09g2BqKFpDac7WKrapB7kUF8eYKw.png"
 tags: ["life"]
-oldViewCount: "3423"
+oldViewCount: 3424
 oldKeywords: ["技术,如何成为程序员"]
 ---
 

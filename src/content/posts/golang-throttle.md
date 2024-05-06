@@ -5,7 +5,7 @@ pubDate: "2021-01-15 09:41:08"
 category: "golang"
 cardImage: "https://images.godruoyi.com/logos/202101/15/yWQr5M7GVezjkDoj9tmJqBEwnATIUdmAxa4TRA1y.jpeg"
 tags: ["golang"]
-oldViewCount: "2932"
+oldViewCount: 2932
 oldKeywords: ["go throttle,go限流器,Go语言限流器的实现"]
 ---
 

@@ -5,7 +5,7 @@ pubDate: "2020-09-29 10:26:48"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202009/30/lDFsFiZo6fCKuKtoqiWzCjPPT7LeXG2A5cW5PcoY.jpeg"
 tags: ["life"]
-oldViewCount: "2773"
+oldViewCount: 2773
 oldKeywords: ["段子,苏联,嘲讽,共产主义,科学,恐怖,兔子,言论自由"]
 ---
 

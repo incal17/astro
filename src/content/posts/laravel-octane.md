@@ -5,7 +5,7 @@ pubDate: "2021-04-29 09:51:32"
 category: "laravel"
 cardImage: "https://images.godruoyi.com/logos/202104/29/xVs1eZ8ja9nLX6XO9EUolY7Zl0MbUTPTyH6FqQLl.png"
 tags: ["laravel"]
-oldViewCount: "8072"
+oldViewCount: 8073
 oldKeywords: ["laravel,laravel-octane,swoole,roadrunner"]
 ---
 

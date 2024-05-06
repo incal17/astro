@@ -5,7 +5,7 @@ pubDate: "2023-07-25 08:37:52"
 category: "laravel"
 cardImage: "https://images.godruoyi.com/logos/202307/25/GxdPb3nbyxlWC8cEekUxTvsRVcVx1Sb9riEa4NNx.png"
 tags: ["laravel"]
-oldViewCount: "3218"
+oldViewCount: 3219
 oldKeywords: ["laravel,php,native-php"]
 ---
 

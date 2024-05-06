@@ -5,7 +5,7 @@ pubDate: "2021-02-11 15:42:01"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202102/11/pysRbXAo7Ag6uh9grFDfUq7yktlfAHbBg9U4B7zA.png"
 tags: ["life"]
-oldViewCount: "2387"
+oldViewCount: 2387
 oldKeywords: ["2020年终总结"]
 ---
 

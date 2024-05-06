@@ -5,7 +5,7 @@ pubDate: "2021-02-04 03:33:39"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202102/04/RFX8MTnNpnrse6othSA6tBwDWhFUMJoVz9T1YjBf.png"
 tags: ["life"]
-oldViewCount: "3478"
+oldViewCount: 3478
 oldKeywords: ["九华山的和尚,九华山,重庆,godruoyi,二愣的闲谈杂鱼"]
 ---
 

@@ -5,7 +5,7 @@ pubDate: "2021-04-15 08:30:29"
 category: "golang"
 cardImage: "https://images.godruoyi.com/logos/202104/15/uEqFnn6SqBapPpW7RN06f6eSgTJcLGMBAKe3fsXs.png"
 tags: ["golang"]
-oldViewCount: "5324"
+oldViewCount: 5324
 oldKeywords: ["snowflake"]
 ---
 

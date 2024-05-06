@@ -11,7 +11,7 @@ interface Props {
 }
 ---
 
-<a href=`/categories/${slug}` class="size-full bg-neutral-100 shadow-lg rounded-lg p-5 dark:bg-neutral-900/30 group">
+<a href=`/categories/${slug}` class="flex flex-col justify-between size-full bg-neutral-100 shadow-lg rounded-lg p-5 dark:bg-neutral-900/30 group">
     <div class="flex justify-between items-center mb-3">
         <div class="flex justify-center gap-x-4 items-center">
             <div class="flex-shrink-0">
@@ -22,7 +22,7 @@ interface Props {
         </div>
     </div>
 
-    <p class="block text-neutral-500 min-h-[80px] group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400">
+    <p class="block text-neutral-500 min-h-[60px] group-hover:text-neutral-600 dark:text-neutral-500 dark:group-hover:text-neutral-400">
         {description}
     </p>
 

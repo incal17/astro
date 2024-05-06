@@ -7,13 +7,17 @@ const { blogs } = Astro.props
 interface Props {
     blogs: CollectionEntry<'posts'>[]
 }
+
+const posts = blogs.slice(0, 4).map((b, i) => {
+    return { ...b, imgRight: i === 1 }
+})
 ---
 
 <section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
     {
-        blogs.slice(0, 4).map((b, index) => (
-            <div class=`grid sm:grid-cols-2 sm:items-center gap-8 ${index !== 0 ? 'mt-10' : ''}`>
-                <div class=`sm:order-${index === 1 ? 2 : 1}`>
+        posts.map(b => (
+            <div class=`grid sm:grid-cols-2 sm:items-center gap-8 mt-10 first:mt-0`>
+                <div class=`sm:order-${b.imgRight ? 2 : 1}`>
                     <div class="relative rounded-lg">
                         <img
                             class="top-0 start-0 object-cover rounded-lg"
@@ -25,11 +29,11 @@ interface Props {
                     </div>
                 </div>
 
-                <div class=`sm:order-${index === 1 ? 1 : 2} group`>
+                <div class=`sm:order-${b.imgRight ? 1 : 2} group`>
                     <h2 class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-3xl lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight">
                         <a
                             class="outline-none ring-zinc-500 transition duration-300 group-hover:text-orange-400 focus-visible:ring dark:text-neutral-300 dark:ring-zinc-200 dark:focus:outline-none"
-                            href="/"
+                            href=`/posts/${b.slug}`
                         >
                             {b.data.title}
                         </a>
@@ -40,7 +44,7 @@ interface Props {
                             {b.data.description}
                         </p>
                         <PrimaryCTA
-                            url="x"
+                            url=`/posts/${b.slug}`
                             title="Read More"
                             data-astro-prefetch
                         />

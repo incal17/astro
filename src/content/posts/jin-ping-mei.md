@@ -5,7 +5,7 @@ pubDate: "2021-02-19 08:23:15"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202102/19/oPUzmrZg7MUMtP2L7Jk54USu03WZaIav8L6Fm0n6.jpeg"
 tags: ["life"]
-oldViewCount: "2144"
+oldViewCount: 2144
 oldKeywords: ["金瓶梅,go,godruoyi,金瓶梅的go实现"]
 ---
 

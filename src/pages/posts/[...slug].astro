@@ -24,8 +24,8 @@ const tags = post.data.tags ?? [category.slug]
 ---
 
 <BaseLayout>
-    <section class="mx-auto max-w-4xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pt-12">
-        <div class="shadow-lg">
+    <section class="mx-auto max-w-6xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pt-12">
+        <div class="shadow-sm">
             <div>
                 <img
                     class="w-full object-cover rounded-tl-sm rounded-tr-sm"
@@ -82,7 +82,7 @@ const tags = post.data.tags ?? [category.slug]
                     </ol>
                 </div>
 
-                <article class="prose prose-blog dark:prose-invert max-w-none">
+                <article class="prose prose-blog prose-lg dark:prose-invert max-w-none">
                     <Content />
                 </article>
 

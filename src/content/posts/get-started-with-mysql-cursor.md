@@ -5,7 +5,7 @@ pubDate: "2018-04-04 07:43:48"
 category: "mysql"
 cardImage: "https://images.godruoyi.com/logos/201903/26/_1553621481_JkgiDiMr2h.png"
 tags: ["mysql"]
-oldViewCount: "353"
+oldViewCount: 353
 oldKeywords: ["null"]
 ---
 

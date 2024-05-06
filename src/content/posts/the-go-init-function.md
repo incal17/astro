@@ -5,7 +5,7 @@ pubDate: "2020-10-30 09:42:11"
 category: "golang"
 cardImage: "https://images.godruoyi.com/logos/202010/30/gsjg5h5pRyfRBreK7ED4eO8lls2AlWq9V2oEdBKx.png"
 tags: ["golang"]
-oldViewCount: "2955"
+oldViewCount: 2955
 oldKeywords: ["go初始化,init函数,初始化,go,init"]
 ---
 

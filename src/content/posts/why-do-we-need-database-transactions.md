@@ -5,7 +5,7 @@ pubDate: "2021-08-03 07:41:41"
 category: "mysql"
 cardImage: "https://images.godruoyi.com/logos/202108/03/jFCjp0lKCELdUeIJYNFqfp5BgU1BaVZYbdwmVLJh.jpeg"
 tags: ["mysql"]
-oldViewCount: "3519"
+oldViewCount: 3519
 oldKeywords: ["事务,ACID,Atomicity,Consistency,Isolation,Read Committed,Snapshot,隔离级别"]
 ---
 

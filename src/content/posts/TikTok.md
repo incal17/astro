@@ -5,7 +5,7 @@ pubDate: "2021-11-12 03:10:04"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202111/12/vPpwKAnxQWsETNh3QEsZeXMKkCxlVrFUq7tJU7dB.jpeg"
 tags: ["life"]
-oldViewCount: "4052"
+oldViewCount: 4052
 oldKeywords: ["TikTok,吃瓜子,丰子恺,抖音,娱乐至死"]
 ---
 

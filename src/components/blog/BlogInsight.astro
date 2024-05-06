@@ -11,10 +11,10 @@ interface Props {
 
 <a
     class="group outline-none rounded-xl ring-zinc-500 transition duration-300 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
-    href={`/insights/${blog.slug}/`}
+    href={`/posts/${blog.slug}/`}
 >
     <div class="aspect-w-16 aspect-h-10 relative overflow-hidden rounded-xl ">
-        <img class="w-full object-cover rounded-xl transition duration-500 ease-in-out group-hover:scale-105" src={blog.data.cardImage} alt="Image Description">
+        <img class="w-full object-cover rounded-xl transition duration-500 ease-in-out group-hover:scale-105" src={blog.data.cardImage} alt={blog.data.title} />
     </div>
 
     <div class="mt-7">

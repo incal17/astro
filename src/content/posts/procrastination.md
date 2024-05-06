@@ -5,7 +5,7 @@ pubDate: "2020-11-20 08:53:41"
 category: "php"
 cardImage: "https://images.godruoyi.com/logos/202011/20/ZUZkJL1ik3SrCe2b1rf8obtmXlNnpEi7loouJ6mv.jpeg"
 tags: ["php"]
-oldViewCount: "2906"
+oldViewCount: 2906
 oldKeywords: ["生活,ocr,php-ocr,tencent-ocr,aliyun-ocr,baidu-ocr"]
 ---
 

@@ -5,7 +5,7 @@ pubDate: "2018-05-07 03:07:05"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202103/25/6thaLd7mXc4878byoBTLk6ZJ6yatn6ZHTDVnILWF.jpeg"
 tags: ["life"]
-oldViewCount: "4207"
+oldViewCount: 4207
 oldKeywords: ["二愣的闲谈杂鱼"]
 ---
 

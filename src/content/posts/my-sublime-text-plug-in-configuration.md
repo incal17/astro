@@ -5,7 +5,7 @@ pubDate: "2018-04-04 07:29:58"
 category: "tool"
 cardImage: "https://images.godruoyi.com/logos/201908/02/_1564749562_U4OySY6DaY.jpg"
 tags: ["tool"]
-oldViewCount: "2367"
+oldViewCount: 2367
 oldKeywords: ["null"]
 ---
 

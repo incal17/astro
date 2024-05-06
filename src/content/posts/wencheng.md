@@ -5,7 +5,7 @@ pubDate: "2021-09-23 05:50:30"
 category: "books"
 cardImage: "https://images.godruoyi.com/logos/202109/23/LTon13CrqxnO2m0WD3Npe6CAc8kwbBr1gUPfqaMz.jpeg"
 tags: ["books"]
-oldViewCount: "3895"
+oldViewCount: 3895
 oldKeywords: ["文城,余华,wencheng,林祥福,小美"]
 ---
 

@@ -5,7 +5,7 @@ pubDate: "2020-08-20 05:36:27"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202008/20/_1597901755_TZ4DJUTlFW.jpg"
 tags: ["life"]
-oldViewCount: "2218"
+oldViewCount: 2218
 oldKeywords: ["null"]
 ---
 

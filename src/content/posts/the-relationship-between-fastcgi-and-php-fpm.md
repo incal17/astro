@@ -5,7 +5,7 @@ pubDate: "2018-04-04 07:32:25"
 category: "php"
 cardImage: "https://images.godruoyi.com/logos/201908/31/_1567224162_PFOHIykVkd.jpg"
 tags: ["php"]
-oldViewCount: "3391"
+oldViewCount: 3391
 oldKeywords: ["null"]
 ---
 
