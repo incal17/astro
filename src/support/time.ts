@@ -1,4 +1,6 @@
 import { format, register } from 'timeago.js'
+import getReadingTime from 'reading-time'
+import { toString } from 'mdast-util-to-string'
 
 const TimeAgoConfiguration: string[][] = [
     ['today', 'today'],
@@ -51,4 +53,15 @@ function timeago(date?: Date): string {
     return format(date, 'timeago')
 }
 
-export { formatDate, timeago, formatDateFull }
+function remarkReadingTime() {
+    // eslint-disable-next-line ts/ban-ts-comment
+    // @ts-expect-error
+    return function (tree, { data }) {
+        const textOnPage = toString(tree)
+        const readingTime = getReadingTime(textOnPage)
+
+        data.astro.frontmatter.minutesRead = readingTime.text
+    }
+}
+
+export { formatDate, timeago, formatDateFull, remarkReadingTime }
