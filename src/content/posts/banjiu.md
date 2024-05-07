@@ -7,7 +7,6 @@ cardImage: "https://images.godruoyi.com/logos/202401/31/QczVNWs0YPOPfntslMjyHj6W
 cardImage2: "https://images.godruoyi.com/logos/202405/07/FmYZGAaAKbhtMSaTgqjjFMPVYdAqL1PNdcFnT4kS.png"
 tags: ["life"]
 oldViewCount: 774
-selected: true
 oldKeywords: ["办酒,送礼"]
 ---
 
