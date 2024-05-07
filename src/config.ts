@@ -8,7 +8,7 @@ export const SITE: Site = {
 }
 
 export const NavigationLinks: NavigationLink[] = [
-    { name: 'Blog', url: '/posts' },
+    { name: 'Posts', url: '/posts' },
     { name: 'Category', url: '/categories' },
     { name: 'Timeline', url: '/timeline' },
     { name: 'About', url: '/posts/about-godruoyi' },
@@ -36,6 +36,13 @@ export const Friends: User[] = [
         title: '一个工程师',
         name: 'Draven',
         description: 'Go 语言设计与实现作者，偶像',
+    },
+    {
+        avatar: 'https://pbs.twimg.com/profile_images/1598673328155262977/c_95AZZ8_400x400.jpg',
+        social: { twitter: 'brendt_gd', github: 'brendt' },
+        title: 'dev adv@phpstorm',
+        name: 'Brent Roose',
+        description: 'All In PHP & Laravel',
     },
 ]
 
