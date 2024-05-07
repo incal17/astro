@@ -1,25 +1,23 @@
 ---
 import BrandLogo from '@components/logos/BrandLogo.astro'
 import { Image } from 'astro:assets'
-import elephantWhite from 'images/elephant-white.svg'
+import ponyo from 'images/ponyo3.png'
 import { FooterLinks, SITE } from '../config'
-
-const crafted: string = 'Crafted by'
 ---
 
 <footer class="w-full bg-neutral-300 dark:bg-neutral-900">
     <div class="mx-auto w-full max-w-[85rem] px-4 py-10 sm:px-6 lg:px-16 lg:pt-20 2xl:max-w-screen-2xl">
         <div class="grid grid-cols-2 gap-6 md:grid-cols-4 lg:grid-cols-5">
-            <div class="col-span-full lg:col-span-1">
-                <BrandLogo class="h-auto w-32" />
+            <div class="col-span-full flex justify-center md:grid lg:col-span-1">
+                <BrandLogo class="h-auto w-28 rounded-full" />
             </div>
             {
                 FooterLinks.map(section => (
-                        <div class="col-span-1">
-                            <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
-                                {section.section}
-                            </h3>
-                            <ul class="mt-3 grid space-y-3">
+                    <div class="col-span-1 mx-20">
+                        <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
+                            {section.section}
+                        </h3>
+                        <ul class="mt-3 grid space-y-3">
                                 {section.links.map((link, _index) => (
                                         <li>
                                             <a
@@ -31,15 +29,15 @@ const crafted: string = 'Crafted by'
                                         </li>
                                 ))}
                             </ul>
-                        </div>
+                    </div>
                 ))
             }
 
-            <div class="col-span-2 flex justify-center ">
+            <div class="col-span-2 flex justify-center mt-10 md:mt-0">
                 <div class="max-w-[320px] max-h-[320px] -mt-16 scale-75">
                     <Image
-                        src={elephantWhite}
-                        alt="godruoyi elephant png"
+                        src={ponyo}
+                        alt={SITE.title}
                         class="h-full w-full object-cover object-center"
                         draggable="false"
                         loading="eager"
@@ -51,14 +49,7 @@ const crafted: string = 'Crafted by'
 
         <div class="flex items-center text-center justify-center">
             <p class="text-sm text-neutral-600 dark:text-neutral-400">
-                © <span id="current-year"></span> {SITE.title} {crafted}
-                <a
-                    class="rounded-lg font-medium underline underline-offset-2 outline-none ring-zinc-500 transition duration-300 hover:text-neutral-700 hover:decoration-dashed focus:outline-none focus-visible:ring dark:ring-zinc-200 dark:hover:text-neutral-300"
-                    href="https://screwfast.uk/"
-                    target="_blank"
-                    rel="ScrewFast Blog"
-                >ScrewFast</a
-                >.
+                © <span id="current-year">2024</span> {SITE.title}
             </p>
         </div>
     </div>

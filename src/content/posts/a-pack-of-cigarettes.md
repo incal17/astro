@@ -6,6 +6,7 @@ category: "life"
 cardImage: "https://images.godruoyi.com/logos/202110/29/NQ2XNWNbIBlIRcQuE31zArmpGr7X9N0y5M99LnSb.jpeg"
 tags: ["life"]
 oldViewCount: 3706
+selected: true
 oldKeywords: ["烟,一包烟,lianbo,godruoyi"]
 ---
 

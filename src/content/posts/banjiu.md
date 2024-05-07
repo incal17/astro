@@ -4,8 +4,10 @@ description: "许老三今天吃了五家人户的酒，送出去了八百块钱
 pubDate: "2024-01-31 08:15:49"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202401/31/QczVNWs0YPOPfntslMjyHj6WSovweesFXsdZuNKL.jpeg"
+cardImage2: "https://images.godruoyi.com/logos/202405/07/FmYZGAaAKbhtMSaTgqjjFMPVYdAqL1PNdcFnT4kS.png"
 tags: ["life"]
 oldViewCount: 774
+selected: true
 oldKeywords: ["办酒,送礼"]
 ---
 

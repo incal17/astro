@@ -23,7 +23,7 @@ const category: CollectionEntry<'categories'> = (await getCollection('categories
 const tags = post.data.tags ?? [category.slug]
 ---
 
-<BaseLayout>
+<BaseLayout title={post.data.title}>
     <section class="mx-auto max-w-6xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pt-12">
         <div class="shadow-sm">
             <div>

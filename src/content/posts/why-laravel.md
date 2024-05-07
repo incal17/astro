@@ -6,6 +6,7 @@ category: "laravel"
 cardImage: "https://images.godruoyi.com/logos/202401/24/cltrDj0NYYvdGRANg6gPkpafhUZkjLKQVn2Lofld.jpeg"
 tags: ["laravel"]
 oldViewCount: 13934
+selected: true
 oldKeywords: ["laravel,whylaravel,php,container"]
 ---
 

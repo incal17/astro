@@ -6,6 +6,7 @@ category: "life"
 cardImage: "https://images.godruoyi.com/logos/202402/09/23zdmLzhMv4Y6HhpqSTmupMhL6CFQjIEewpAAuYL.jpeg"
 tags: ["life"]
 oldViewCount: 754
+selected: true
 oldKeywords: ["2023"]
 ---
 

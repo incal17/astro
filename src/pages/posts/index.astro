@@ -5,7 +5,6 @@ import BaseLayout from '@layouts/BaseLayout.astro'
 import MainSection from '@components/blocks/MainSection.astro'
 import BlogRecentCard from '@components/blog/BlogRecentCard.astro'
 import BlogSelectedArticle from '@components/blog/BlogSelectedArticle.astro'
-import BlogNumbers from '../../components/blog/BlogNumbers.astro'
 
 const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
     (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -14,7 +13,7 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
 const selectedPosts: CollectionEntry<'posts'>[] = posts.filter(p => p.data.selected)
 ---
 
-<BaseLayout title="Hello">
+<BaseLayout title="Blogs">
     <MainSection
         title="Write you want"
         subTitle="生活不能让人处处满意，但我们还要热情的生活下去"
@@ -24,8 +23,6 @@ const selectedPosts: CollectionEntry<'posts'>[] = posts.filter(p => p.data.selec
     />
 
     <BlogRecentCard blogs={posts} />
-    <BlogNumbers blogs={posts} />
-
     <BlogSelectedArticle posts={selectedPosts} />
 </BaseLayout>
 

@@ -6,6 +6,7 @@ category: "life"
 cardImage: "https://images.godruoyi.com/logos/202301/04/jfxd7lxnFNWPfKudZ3dewqpczfJxH3CTLWuQBmB3.jpeg"
 tags: ["life"]
 oldViewCount: 2483
+selected: true
 oldKeywords: ["godruoyi,年终总结"]
 ---
 

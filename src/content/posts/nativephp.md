@@ -6,6 +6,7 @@ category: "laravel"
 cardImage: "https://images.godruoyi.com/logos/202307/25/GxdPb3nbyxlWC8cEekUxTvsRVcVx1Sb9riEa4NNx.png"
 tags: ["laravel"]
 oldViewCount: 3219
+selected: true
 oldKeywords: ["laravel,php,native-php"]
 ---
 

@@ -8,6 +8,7 @@ const posts = defineCollection({
         title: z.string(),
         description: z.string(),
         cardImage: z.string(),
+        cardImage2: z.string().optional(),
         category: z.string(),
         pubDate: z.coerce.date(),
         selected: z.boolean().optional(),

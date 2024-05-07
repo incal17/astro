@@ -4,8 +4,10 @@ description: "对于看家护院来说，两条狗就已经够了；丈母娘就
 pubDate: "2023-11-04 15:21:48"
 category: "life"
 cardImage: "https://images.godruoyi.com/logos/202311/04/QBB0CImWrPPETTcpQdkwYiMw0AnJL4CH4FJ1dq0O.jpeg"
+cardImage2: "https://images.godruoyi.com/logos/202405/07/CxKkuBwnyx3nDZhVilv1MCJNaFWaSnKkCRBMl3Jl.png"
 tags: ["life"]
 oldViewCount: 1032
+selected: true
 oldKeywords: ["godruoyi,一条狗的使命"]
 ---
 

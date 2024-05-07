@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
-import PrimaryCTA from '../buttons/PrimaryCTA.astro'
+import LeftSection from './blocks/LeftSection.astro'
+import RightSection from './blocks/RightSection.astro'
 
 const { blogs } = Astro.props
 
@@ -8,49 +9,36 @@ interface Props {
     blogs: CollectionEntry<'posts'>[]
 }
 
-const posts = blogs.slice(0, 4).map((b, i) => {
-    return { ...b, imgRight: i === 1 }
-})
+const posts = blogs.slice(0, 5)
 ---
 
-<section class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full">
-    {
-        posts.map(b => (
-            <div class=`grid sm:grid-cols-2 sm:items-center gap-8 mt-10 first:mt-0`>
-                <div class=`sm:order-${b.imgRight ? 2 : 1}`>
-                    <div class="relative rounded-lg">
-                        <img
-                            class="top-0 start-0 object-cover rounded-lg"
-                            src={b.data.cardImage}
-                            alt={b.data.title}
-                            draggable="false"
-                            loading="eager"
-                        />
-                    </div>
-                </div>
-
-                <div class=`sm:order-${b.imgRight ? 1 : 2} group`>
-                    <h2 class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-3xl lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight">
-                        <a
-                            class="outline-none ring-zinc-500 transition duration-300 group-hover:text-orange-400 focus-visible:ring dark:text-neutral-300 dark:ring-zinc-200 dark:focus:outline-none"
-                            href=`/posts/${b.slug}`
-                        >
-                            {b.data.title}
-                        </a>
-                    </h2>
-
-                    <div class="mt-2">
-                        <p class="mb-3 text-sm text-gray-600 group-hover:text-neutral-500 dark:text-neutral-400 dark:group-hover:text-neutral-500">
-                            {b.data.description}
-                        </p>
-                        <PrimaryCTA
-                            url=`/posts/${b.slug}`
-                            title="Read More"
-                            data-astro-prefetch
-                        />
-                    </div>
-                </div>
-            </div>
+{
+    posts.map((b, index) => index % 2 === 0
+        ? (
+            <LeftSection
+                title={b.data.title}
+                subTitle={b.data.description}
+                btnExists={true}
+                btnTitle="Read More"
+                btnURL=`/posts/${b.slug}`
+                img={b.data.cardImage}
+                imgAlt={b.data.title}
+            />
+        )
+        : (
+            <RightSection
+                title={b.data.title}
+                subTitle={b.data.description}
+                btnExists={true}
+                btnTitle="Read More"
+                btnURL=`/posts/${b.slug}`
+                img={b.data.cardImage}
+                imgAlt={b.data.title}
+                single={!b.data.cardImage2}
+                imgOne={b.data.cardImage}
+                imgOneAlt={b.data.title}
+                imgTwo={b.data?.cardImage2}
+                imgTwoAlt={b.data.title}
+            />
         ))
-    }
-</section>
+}
