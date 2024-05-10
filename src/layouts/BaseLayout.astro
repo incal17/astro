@@ -2,23 +2,30 @@
 import BaseHead from '@components/BaseHead.astro'
 import Footer from '@components/Footer.astro'
 import Header from '@components/Header.astro'
+import GoogleAnalytics from '@components/support/GoogleAnalytics.astro'
 import { SITE } from '../config'
-
-import '../styles/global.css'
 
 interface Props {
     title: string
+    description: string
+    ogImage?: any
     lang?: string
 }
 
-const { title, lang = 'en' } = Astro.props
-const normalizeTitle = title === '' ? SITE.title : `${title} - ${SITE.title}`
+const { title, description = SITE.description, ogImage, lang = 'en' } = Astro.props
+const normalizeTitle = !title ? SITE.title : `${title} - ${SITE.title}`
 ---
 
 <html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
     <head>
         <title>{normalizeTitle}</title>
-        <BaseHead title={normalizeTitle} description="description" />
+        <BaseHead
+            title={normalizeTitle}
+            description={description}
+            ogImage={ogImage}
+            ogTitle={title === '' ? SITE.title : title}
+            ogDescription={description}
+        />
         <script is:inline>
             if (localStorage.getItem("hs_theme") === "dark"
                 || (!("hs_theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
@@ -36,6 +43,7 @@ const normalizeTitle = title === '' ? SITE.title : `${title} - ${SITE.title}`
             }
             requestAnimationFrame(raf)
         </script>
+        <GoogleAnalytics />
     </head>
     <body class="bg-neutral-200 selection:bg-yellow-400 selection:text-neutral-700 dark:bg-neutral-800">
         <div class="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">

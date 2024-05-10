@@ -20,11 +20,12 @@ const postMap: Map<string, CollectionEntry<'posts'>[]> = (await getCollection('p
     return acc
 }, new Map<string, CollectionEntry<'posts'>[]>())
 
-const categories = await getCollection('categories');
+const categories = await getCollection('categories')
+const description = 'Here are some categories that godruoyi is interested in, including Laravel, Golang, and her life.'
 ---
 
-<BaseLayout title="All Catrgories">
-    <MainSection title="Categories" subTitle="List all the categories that I am interested, including some that haven't been updated recently." />
+<BaseLayout title="All Catrgories" description={description}>
+    <MainSection title="Categories" subTitle={description} />
 
     <section class="mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:pt-10 lg:py-14 2xl:max-w-full">
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 items-center gap-6 md:gap-10">

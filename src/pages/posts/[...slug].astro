@@ -21,9 +21,10 @@ const category: CollectionEntry<'categories'> = (await getCollection('categories
 ).pop()
 
 const tags = post.data.tags ?? [category.slug]
+const ogImage = undefined; // todo
 ---
 
-<BaseLayout title={post.data.title}>
+<BaseLayout title={post.data.title} description={post.data.description} ogImage={ogImage}>
     <section class="mx-auto max-w-6xl px-4 pb-12 pt-8 sm:px-6 lg:px-8 lg:pt-12">
         <div class="shadow-none sm:shadow-sm mt-4 sm:mt-0">
             <div class="max-w-6xl">

@@ -13,7 +13,7 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
 const selectedPosts: CollectionEntry<'posts'>[] = posts.filter(p => p.data.selected)
 ---
 
-<BaseLayout title="Blogs">
+<BaseLayout title="All Blogs" description="Here are some articles that Godruoyi believes are not bad, hope you enjoy them.">
     <MainSection
         title="Write you want"
         subTitle="生活不能让人处处满意，但我们还要热情的生活下去"

@@ -2,9 +2,10 @@ import type { NavigationLink, Site, User } from './types.ts'
 
 export const SITE: Site = {
     author: 'Godruoyi',
-    domain: 'https://godruoyi.com',
+    url: 'https://godruoyi.com',
     title: '连波的闲谈杂鱼',
-    description: '连波的个人博客，记录自己的点滴',
+    description: 'Godruoyi\'s personal blog, I enjoy the process of building something using any technology stack',
+    shortDescription: '',
 }
 
 export const NavigationLinks: NavigationLink[] = [
@@ -65,3 +66,28 @@ export const FooterLinks = [
         ],
     },
 ]
+
+export const GoogleAnalytics = {
+    enable: true,
+    id: 'G-TKQ4L3ZDSF',
+}
+
+export const SEO = {
+    title: SITE.title,
+    description: SITE.description,
+    structuredData: {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'inLanguage': 'en-US',
+        '@id': SITE.url,
+        'url': SITE.url,
+        'name': SITE.title,
+        'description': SITE.description,
+        'isPartOf': {
+            '@type': 'WebSite',
+            'url': SITE.url,
+            'name': SITE.title,
+            'description': SITE.description,
+        },
+    },
+}

@@ -13,10 +13,10 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
 ).slice(0, 3);
 ---
 
-<BaseLayout title="">
+<BaseLayout>
     <HeroSection
         title=`Hello, <span class="text-yellow-500 dark:text-yellow-400">Godruoyi</span>`
-        subTitle="Hi, I'm Lianbo, I enjoy the process of building something using any technology stack, welcome to my blog 🐜"
+        subTitle="Hi, I'm Lianbo, I enjoy the process of building something using any technology stack, welcome to my blog"
         primaryBtn="Explore Posts"
         primaryBtnURL="/posts"
         src={blogHeroImg}

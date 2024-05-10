@@ -11,7 +11,7 @@ export async function GET() {
     return rss({
         title: SITE.title,
         description: SITE.description,
-        site: SITE.domain,
+        site: SITE.url,
         items: posts.map(post => ({
             ...post.data,
             link: `/posts/${post.slug}/`,

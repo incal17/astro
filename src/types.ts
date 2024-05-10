@@ -1,8 +1,9 @@
 export interface Site {
     title: string
     author: string
-    domain: string
+    url: string
     description: string
+    shortDescription: string
 }
 
 export interface NavigationLink {

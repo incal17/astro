@@ -21,7 +21,7 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
 });
 ---
 
-<BaseLayout title={category.data.title}>
+<BaseLayout title={category.data.title} description={category.data.description}>
     <MainSection
         title={category.data.title}
         subTitle={category.data.description}
