@@ -10,9 +10,10 @@ interface Props {
     description: string
     ogImage?: any
     lang?: string
+    structuredData?: object
 }
 
-const { title, description = SITE.description, ogImage, lang = 'en' } = Astro.props
+const { title, description = SITE.description, ogImage, lang = 'en', structuredData } = Astro.props
 const normalizeTitle = !title ? SITE.title : `${title} - ${SITE.title}`
 ---
 
@@ -25,6 +26,7 @@ const normalizeTitle = !title ? SITE.title : `${title} - ${SITE.title}`
             ogImage={ogImage}
             ogTitle={title === '' ? SITE.title : title}
             ogDescription={description}
+            structuredData={structuredData}
         />
         <script is:inline>
             if (localStorage.getItem("hs_theme") === "dark"

@@ -5,6 +5,7 @@ import BaseLayout from '@layouts/BaseLayout.astro'
 import MainSection from '@components/blocks/MainSection.astro'
 import BlogCategory from '@components/blog/BlogCategory.astro'
 import { timeago } from '../../support/time'
+import { SITE } from '../../config'
 
 const postMap: Map<string, CollectionEntry<'posts'>[]> = (await getCollection('posts')).sort(
     (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -22,9 +23,29 @@ const postMap: Map<string, CollectionEntry<'posts'>[]> = (await getCollection('p
 
 const categories = await getCollection('categories')
 const description = 'Here are some categories that godruoyi is interested in, including Laravel, Golang, and her life.'
+const URL = Astro.url.href
 ---
 
-<BaseLayout title="All Catrgories" description={description}>
+<BaseLayout
+    title="All Categories"
+    description={description}
+    structuredData={{
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'inLanguage': 'en-US',
+        '@id': URL,
+        'url': URL,
+        'name': `All Categories - ${SITE.title}`,
+        'description': description,
+        'isPartOf': {
+            '@type': 'WebSite',
+            'url': SITE.url,
+            'name': SITE.title,
+            'description': SITE.description,
+        },
+    }}
+
+>
     <MainSection title="Categories" subTitle={description} />
 
     <section class="mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:pt-10 lg:py-14 2xl:max-w-full">

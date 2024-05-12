@@ -7,7 +7,7 @@ cardImage: "https://images.godruoyi.com/logos/202008/20/_1597901755_TZ4DJUTlFW.j
 tags: ["life"]
 oldViewCount: 2218
 oldKeywords: ["null"]
-ogImage: '../images/hero-img-1.png'
+ogImage: '../images/hero-landing.png'
 ---
 
 家里面的老人说立秋后的第一场雨就是要强降温的前奏，跟着就会反一波热浪，重庆称为「秋老虎」（意思就是强降温之后再来一波强升温达到 38° 39°那种天气，还是有点热的哦），跟着就会越来越冷身上越来越厚进入到了寒风萧萧的冬季~。

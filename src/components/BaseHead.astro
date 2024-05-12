@@ -2,8 +2,8 @@
 import faviconSvgSrc from '@images/icon.svg'
 import { getImage } from 'astro:assets'
 import faviconSrc from '@images/icon.png'
-import socialSrc from '@images/social.png'
-import { SITE } from '../config'
+import socialSrc from '@images/social-home.png'
+import { SEO, SITE } from '../config'
 
 interface Props {
     title: string
@@ -11,12 +11,8 @@ interface Props {
     ogImage?: string
     ogTitle?: string
     ogDescription?: string
+    structuredData?: object
 }
-
-// const {
-//     description = SITE.description,
-//     structuredData = SEO.structuredData,
-// } = Astro.props
 
 const canonicalURL = Astro.url.href
 const {
@@ -25,29 +21,24 @@ const {
     ogImage = socialSrc,
     ogTitle = title,
     ogDescription = description,
+    structuredData = SEO.structuredData,
 } = Astro.props
 
-const faviconSvg = await getImage({
-    src: faviconSvgSrc,
-    format: 'svg',
-})
-
-const appleTouchIcon = await getImage({
-    src: faviconSrc,
-    width: 180,
-    height: 180,
-    format: 'png',
-})
-
-const socialImageRes = await getImage({
-  src: ogImage,
-  width: 1200,
-  height: 600,
-})
+const faviconSvg = await getImage({ src: faviconSvgSrc, format: 'svg' })
+const appleTouchIcon = await getImage({ src: faviconSrc, width: 180, height: 180, format: 'png' })
+const socialImageRes = await getImage({ src: ogImage, width: 1200, height: 600 })
 const socialImage = Astro.url.origin + socialImageRes.src
 ---
 
 <!-- Inject structured data https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data -->
+{
+    structuredData && (
+        <script
+            type="application/ld+json"
+            set:html={JSON.stringify(structuredData)}
+        />
+    )
+}
 
 <!-- Global Metadata -->
 <meta name="title" content={title} />

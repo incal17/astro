@@ -3,6 +3,7 @@ import BaseLayout from '@layouts/BaseLayout.astro'
 import { type CollectionEntry, getCollection } from 'astro:content'
 import MainSection from '@components/blocks/MainSection.astro'
 import BlogCard from '@components/blog/BlogCard.astro'
+import { SITE } from '../../config'
 
 export async function getStaticPaths() {
     const categories = await getCollection('categories')
@@ -13,6 +14,8 @@ export async function getStaticPaths() {
 }
 
 const { category } = Astro.props
+const URL = Astro.url.href
+const categoriesURL = `${Astro.url.origin}/categories`
 
 const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
     (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -21,7 +24,24 @@ const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
 });
 ---
 
-<BaseLayout title={category.data.title} description={category.data.description}>
+<BaseLayout
+    title={category.data.title}
+    description={category.data.description}
+    structuredData={{
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        'inLanguage': 'en-US',
+        '@id': URL,
+        'url': URL,
+        'name': `${category.data.title} - ${SITE.title}`,
+        'description': category.data.description,
+        'isPartOf': {
+            '@type': 'WebSite',
+            'url': categoriesURL,
+            'name': `All Categories - ${SITE.title}`,
+        },
+    }}
+>
     <MainSection
         title={category.data.title}
         subTitle={category.data.description}

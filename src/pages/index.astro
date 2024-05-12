@@ -6,7 +6,7 @@ import HeroSection from '@components/blocks/HeroSection.astro'
 import BlogInsight from '@components/blog/BlogInsight.astro'
 import FeaturesSection from '@components/blocks/FeaturesSection.astro'
 import HeroSectionAlt from '@components/blocks/HeroSectionAlt.astro'
-import blogHeroImg from '@images/hero-img-1.png'
+import blogHeroImg from '@images/hero-landing.png'
 
 const posts: CollectionEntry<'posts'>[] = (await getCollection('posts')).sort(
     (a: CollectionEntry<'posts'>, b: CollectionEntry<'posts'>) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),

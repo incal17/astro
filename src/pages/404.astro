@@ -1,13 +1,12 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro'
-import NotFoundButton from '@components/buttons/NotFoundButton.astro'
+import PrimaryCTA from '@components/buttons/PrimaryCTA.astro'
 import { SITE } from '../config'
 
 const pageTitle: string = `Page Not Found | ${SITE.title}`
 
-const title: string = '404'
+const title: string = 'Not Found'
 const subTitle: string = '我们真的尽力了，但还是没找到您要的内容'
-const btnTitle: string = 'Go Back';
 ---
 
 <BaseLayout title={pageTitle}>
@@ -20,7 +19,7 @@ const btnTitle: string = 'Go Back';
                 <p class="mb-4 text-balance text-3xl font-bold tracking-tight text-neutral-700 dark:text-neutral-300 md:text-4xl">
                     {subTitle}
                 </p>
-                <NotFoundButton title={btnTitle} id="go-back" />
+                <PrimaryCTA title="Home" url="/" />
             </div>
         </div>
     </section>
