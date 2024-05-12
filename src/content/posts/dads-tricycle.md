@@ -3,7 +3,7 @@ title: "老丈人的三轮车🛺"
 description: "老丈人有一辆三轮车🛺，每次不开车回去时，我都能坐上老丈人的三轮车。以前，我和阿宝会在镇上下大巴，老丈人就从家开着三轮车来接我们。"
 pubDate: "2021-05-06 02:40:42"
 category: "life"
-cardImage: "https://images.godruoyi.com/logos/202105/06/DS3Uh72lIFSfAnI1c7neESOFSZHnzMsVlOpGs9CS.jpeg"
+cardImage: "@images/banners/DS3Uh72lIFSfAnI1c7neESOFSZHnzMsVlOpGs9CS.jpeg"
 tags: ["life"]
 oldViewCount: 2538
 selected: true

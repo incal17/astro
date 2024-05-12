@@ -1,5 +1,6 @@
 ---
 import PrimaryCTA from '@components/buttons/PrimaryCTA.astro'
+import { Image } from 'astro:assets'
 
 const { title, subTitle, btnExists, btnTitle, btnURL, img, imgAlt } = Astro.props
 
@@ -17,7 +18,7 @@ interface Props {
 <section
     class="mx-auto max-w-[85rem] items-center gap-8 px-4 py-10 sm:px-6 sm:py-16 md:grid md:grid-cols-2 lg:grid lg:grid-cols-2 lg:px-8 lg:py-14 xl:gap-16 2xl:max-w-full"
 >
-    <img
+    <Image
         class="w-full rounded-xl"
         src={img}
         alt={imgAlt}

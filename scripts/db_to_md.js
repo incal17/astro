@@ -36,12 +36,26 @@ class BlogToMarkdown {
 
         const formatedPosts = this.formatPosts(categoryMap, posts)
 
-        formatedPosts.forEach((p) => {
-            console.log(`saving post to markdown: ${p.title}`)
-            this.writePostToMarkdown(p)
-        })
+        for (const p of formatedPosts) {
+            // this.writePostToMarkdown(p)
+            await this.savePostBanner(p)
+        }
 
         console.log('All done')
+    }
+
+    async savePostBanner(post) {
+        const filePath = this.postBannerFilePath(post)
+        console.log('savePostBanner', filePath)
+
+        const response = await fetch(post.banner)
+
+        if (!response.ok) {
+            throw new Error('download image failed')
+        }
+
+        const arrayBuffer = await response.arrayBuffer()
+        fs.writeFileSync(filePath, Buffer.from(arrayBuffer))
     }
 
     async fetchPosts() {
@@ -61,6 +75,8 @@ class BlogToMarkdown {
     }
 
     writePostToMarkdown(post) {
+        console.log(`saving post to markdown: ${post.title}`)
+
         const file = this.postToMarkdownFilePath(post)
         const content = this.convertPostToMarkdown(post)
 
@@ -69,6 +85,11 @@ class BlogToMarkdown {
 
     postToMarkdownFilePath(p) {
         return join(__dirname, `./../src/content/posts/${p.slug}.md`)
+    }
+
+    postBannerFilePath(p) {
+        const name = new URL(p.banner).pathname.split('/').pop()
+        return join(__dirname, `./../src/images/posts/${name}`)
     }
 
     convertPostToMarkdown(post) {

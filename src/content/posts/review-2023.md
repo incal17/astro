@@ -3,7 +3,7 @@ title: "2023 年终总结"
 description: "我记得某位推友说过，如果你只是一味的吸取别人的知识，那就算你是在逛 Hacker News，读专业论文，看世界名著，甚至是在读 Linux 源码；那你本质上和那些只知道刷抖音的人来说并没有什么不同"
 pubDate: "2024-02-09 15:10:51"
 category: "life"
-cardImage: "https://images.godruoyi.com/logos/202402/09/23zdmLzhMv4Y6HhpqSTmupMhL6CFQjIEewpAAuYL.jpeg"
+cardImage: "@images/banners/23zdmLzhMv4Y6HhpqSTmupMhL6CFQjIEewpAAuYL.jpeg"
 tags: ["life"]
 oldViewCount: 754
 selected: true

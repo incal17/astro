@@ -1,5 +1,6 @@
 ---
 import PrimaryCTA from '@components/buttons/PrimaryCTA.astro'
+import { Image } from 'astro:assets'
 
 const {
     title,
@@ -45,7 +46,7 @@ interface Props {
         single
             ? (
                 <div class="mt-8">
-                    <img
+                    <Image
                         class="w-full rounded-lg"
                         src={imgOne}
                         alt={imgOneAlt}
@@ -55,14 +56,14 @@ interface Props {
             )
             : (
                 <div class="mt-8 grid grid-cols-2 gap-4">
-                    <img
+                    <Image
                         class="w-full rounded-xl"
                         src={imgOne}
                         alt={imgOneAlt}
                         draggable="false"
                         format="avif"
                     />
-                    <img
+                    <Image
                         class="mt-4 w-full rounded-xl lg:mt-10"
                         src={imgTwo}
                         alt={imgTwoAlt}

@@ -3,8 +3,8 @@ title: "一条甲鱼"
 description: "对于看家护院来说，两条狗就已经够了；丈母娘就经常对老丈人说：「喂那么多狗，狗吃的比人还多，简直是浪费粮食」。老丈人虽然不是地主，但余粮还是有，几条狗也是养得起的"
 pubDate: "2023-11-04 15:21:48"
 category: "life"
-cardImage: "https://images.godruoyi.com/logos/202311/04/QBB0CImWrPPETTcpQdkwYiMw0AnJL4CH4FJ1dq0O.jpeg"
-cardImage2: "https://images.godruoyi.com/logos/202405/07/CxKkuBwnyx3nDZhVilv1MCJNaFWaSnKkCRBMl3Jl.png"
+cardImage: "@images/banners/QBB0CImWrPPETTcpQdkwYiMw0AnJL4CH4FJ1dq0O.jpeg"
+cardImage2: "@images/banners/a-turtle-2.png"
 tags: ["life"]
 oldViewCount: 1032
 selected: true
