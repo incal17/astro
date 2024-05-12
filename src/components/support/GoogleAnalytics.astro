@@ -6,7 +6,7 @@ const ID = GoogleAnalytics.id
 
 {
     GoogleAnalytics.enable && (
-        <script is:inline src=`https://www.googletagmanager.com/gtag/js?id=${ID}`></script>
+        <script is:inline type="text/partytown" src=`https://www.googletagmanager.com/gtag/js?id=${ID}`></script>
         <script is:inline define:vars={{ ID }}>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
