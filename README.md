@@ -21,6 +21,8 @@ Gblog is a blog template designed for those who are unable or unwilling to write
 
 You can use this template directly to build your own blog in four different ways.
 
+https://github.com/godruoyi/gblog/assets/16079222/773cd885-d4b7-482d-818f-566606e70b90
+
 ### Deploy to Zeabur
 
 [![Deploy on Zeabur](https://zeabur.com/button.svg)](https://zeabur.com/templates/6FMSVU)
