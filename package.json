@@ -18,7 +18,9 @@
     "@astrojs/rss": "^3.0.0",
     "@astrojs/sitemap": "^3.0.0",
     "@astrojs/tailwind": "^5.1.0",
+    "@giscus/react": "^3.0.0",
     "@playform/compress": "^0.0.4",
+    "@types/react": "^18.3.2",
     "astro": "^3.1.0",
     "astro-compressor": "^0.4.1",
     "mdast-util-to-string": "^4.0.0",
@@ -32,7 +34,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.13.3",
     "@tailwindcss/typography": "^0.5.13",
-    "eslint": "^9.0.0",
+    "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.34.0",
     "eslint-plugin-format": "^0.1.0",
     "eslint-plugin-react": "^7.34.1",
