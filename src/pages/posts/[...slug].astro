@@ -38,7 +38,7 @@ const ogImage = undefined; // todo
         'url': URL,
         'description': post.data.description,
         'image': [
-            // post.data.cardImage,
+            // post.data.banner,
         ],
         'headline': post.data.title,
         'datePublished': post.data.pubDate,
@@ -55,7 +55,7 @@ const ogImage = undefined; // todo
             <div class="max-w-6xl">
                 <Image
                     class="w-full object-cover rounded-tl-sm rounded-tr-sm"
-                    src={post.data.cardImage}
+                    src={post.data.banner}
                     alt={post.data.title}
                     draggable="false"
                     format="avif"

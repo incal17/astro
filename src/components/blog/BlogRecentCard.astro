@@ -21,7 +21,7 @@ const posts = blogs.slice(0, 5)
                 btnExists={true}
                 btnTitle="Read More"
                 btnURL=`/posts/${b.slug}`
-                img={b.data.cardImage}
+                img={b.data.banner}
                 imgAlt={b.data.title}
             />
         )
@@ -32,12 +32,12 @@ const posts = blogs.slice(0, 5)
                 btnExists={true}
                 btnTitle="Read More"
                 btnURL=`/posts/${b.slug}`
-                img={b.data.cardImage}
+                img={b.data.banner}
                 imgAlt={b.data.title}
-                single={!b.data.cardImage2}
-                imgOne={b.data.cardImage}
+                single={!b.data.banner2}
+                imgOne={b.data.banner}
                 imgOneAlt={b.data.title}
-                imgTwo={b.data?.cardImage2}
+                imgTwo={b.data?.banner2}
                 imgTwoAlt={b.data.title}
             />
         ))
