@@ -1,17 +1,16 @@
-name: deploy blog site
+name: Upload files to S3
+
 on:
   push:
     branches:
-      - main
-    paths:
-      - "website/**"
-
-  workflow_dispatch:
+    - main
 
 env:
-  AWS_REGION: ap-northeast-1
-  AWS_ROLE_ARN: arn:aws:iam::${{ secrets.058264552644 }}:role/github-actions-role
-  AWS_TARGET_S3_BUCKET: ${{ secrets.arn:aws:s3:::sunabas.com }}
+  MY_AWS_REGION: 'ap-northeast-1'
+  AWS_ROLENAME: 'github-connect-to-s3'
+  AWS_S3_BUCKET: 'sunabas.com'
+  SOURCE_DIR: '.'
+  DEST_DIR: ''
 
 jobs:
   deploy:
@@ -20,24 +19,13 @@ jobs:
       id-token: write
       contents: read
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.110.0"
-
-      - name: Build
-        run: |
-          cd website
-          HUGO_ENV=production hugo --minify
-
-      - name: Configure AWS credentials from IAM Role
-        uses: aws-actions/configure-aws-credentials@v1-node16
-        with:
-          role-to-assume: ${{ env.arn:aws:iam::058264552644:role/github-connect-to-s3 }}
-          aws-region: ${{ env.ap-northeast-1 }}
-
-      - name: Upload file to S3
-        run: aws s3 sync --delete website/public s3://${{ env.arn:aws:s3:::sunabas.com }}/website/public
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Configure AWS credentials with IAM Role
+      uses: aws-actions/configure-aws-credentials@main
+      with:
+        role-to-assume: arn:aws:iam::${{secrets.AWS_ACCOUNT_ID}}:role/${{env.AWS_ROLENAME}}
+        aws-region: ${{env.MY_AWS_REGION}}
+    - name: Copy files to S3
+      run: |
+          aws s3 sync ${{env.SOURCE_DIR}} s3://${{env.AWS_S3_BUCKET}}/${{env.DEST_DIR}}/ --exclude '.*git*'
