@@ -24,7 +24,7 @@ jobs:
     - name: Configure AWS credentials with IAM Role
       uses: aws-actions/configure-aws-credentials@main
       with:
-        role-to-assume: arn:aws:iam::${{secrets.058264552644}}:role/${{env.github-connect-to-s3}}
+        role-to-assume: arn:aws:iam::${{secrets.arn:aws:iam::058264552644:role/github-connect-to-s3}}:role/${{env.github-connect-to-s3}}
         aws-region: ${{env.MY_AWS_REGION}}
     - name: Copy files to S3
       run: |
