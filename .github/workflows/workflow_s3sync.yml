@@ -1,0 +1,32 @@
+name: Upload files to S3
+
+on:
+  push:
+    branches:
+    - main
+
+env:
+  MY_AWS_REGION: 'ap-northeast-1'
+  AWS_ROLENAME: 'role_githubactions_s3sync'
+  AWS_S3_BUCKET: 'bucket-name'
+  SOURCE_DIR: '.'
+  DEST_DIR: 'dir'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Configure AWS credentials with IAM Role
+      uses: aws-actions/configure-aws-credentials@main
+      with:
+        role-to-assume: arn:aws:iam::${{secrets.058264552644}}:role/${{env.github-connect-to-s3}}
+        aws-region: ${{env.MY_AWS_REGION}}
+    - name: Copy files to S3
+      run: |
+          aws s3 sync ${{env.dist}} s3://${{env.sunabas.com}}/ --exclude '.*git*'
+
