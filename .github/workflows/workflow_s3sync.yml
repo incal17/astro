@@ -10,7 +10,7 @@ env:
   AWS_ROLENAME: 'github-connect-to-s3'
   AWS_S3_BUCKET: 'sunabas.com'
   SOURCE_DIR: '.'
-  DEST_DIR: ''
+  DEST_DIR: 'dist'
 
 jobs:
   deploy:
