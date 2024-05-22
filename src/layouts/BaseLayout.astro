@@ -6,12 +6,15 @@ import GoogleAnalytics from '@components/support/GoogleAnalytics.astro'
 import { SITE } from '../config'
 
 interface Props {
-    title: string
-    description: string
-    ogImage?: any
-    lang?: string
-    structuredData?: object
+  [key: string]: any;
+  title?: string;
+  description?: string;
+  ogImage?: any;
+  lang?: string;
+  structuredData?: object;
+  children?: React.ReactNode;
 }
+
 
 const { title, description = SITE.description, ogImage, lang = 'en', structuredData } = Astro.props
 const normalizeTitle = !title ? SITE.title : `${title} - ${SITE.title}`

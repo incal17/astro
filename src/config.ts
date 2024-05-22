@@ -3,7 +3,7 @@ import type { NavigationLink, Site, User } from './types.ts'
 export const SITE: Site = {
     author: 'Godruoyi',
     url: 'https://godruoyi.com',
-    title: '连波的闲谈杂鱼',
+    title: 'SUNABAs',
     description: 'Godruoyi\'s personal blog, I enjoy the process of building something using any technology stack',
     shortDescription: '',
 }
@@ -13,7 +13,7 @@ export const NavigationLinks: NavigationLink[] = [
     { name: 'Category', url: '/categories' },
     { name: 'Timeline', url: '/timeline' },
     { name: 'About', url: '/posts/about-godruoyi' },
-    { name: 'Friends', url: '/friends' },
+    // { name: 'Friends', url: '/friends' },
 ]
 
 export const Friends: User[] = [
