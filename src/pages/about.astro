@@ -1,28 +1,79 @@
 ---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "私について";
+
+const happy = true;
+const goal = 3;
+const identity = {
+  firstName: "サラ",
+  country: "カナダ",
+  occupation: "技術ライター",
+  hobbies: ["写真", "バードウォッチング", "野球"],
+};
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "ドキュメントの執筆"];
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
 
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-    <body>
-      <a href="/">ホーム</a>
-      <a href="/about/">概要</a>
-      <a href="/blog/">ブログ</a>
-
-<h1>私について</h1>
-<h2>... そして私の新しいAstroサイトについて！</h2>
-        <h1>私のAstroサイト</h1>
-        <h1>私について</h1>
-        <h2>... そして私の新しいAstroサイトについて！</h2>
-      
-        <p>私はAstroの入門チュートリアルを進めています。これは私のウェブサイトの2番目のページで、自分で作った初めてのページです！</p>
-      
-        <p>このサイトはチュートリアルを進めるにつれて更新されていきます。定期的にチェックして、私の旅の様子を見に来てください！</p>
-      </body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <style>
+      <style > h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .skill {
+        color:var(--skillColor);
+        font-weight: bold;
+      }
+    </style>
+  </head>
 </html>
+<body>
+<Header />
+
+  <h1>{pageTitle}</h1>
+  <h2>... そして私の新しいAstroサイトについて！</h2>
+  <h1>私のAstroサイト</h1>
+  <h1>私について</h1>
+  <h2>... そして私の新しいAstroサイトについて！</h2>
+
+  <p>
+    私はAstroの入門チュートリアルを進めています。これは私のウェブサイトの2番目のページで、自分で作った初めてのページです！
+  </p>
+  <p>以下は私に関するいくつかの事実です。</p>
+  <ul>
+    <li>私の名前は{identity.firstName}です。</li>
+    <li>
+      {identity.country}に住んでおり、{identity.occupation}として働いています。
+    </li>
+    {
+      identity.hobbies.length >= 2 && (
+        <li>
+          私の2つの趣味は{identity.hobbies[0]}と{identity.hobbies[1]}です。
+        </li>
+      )
+    }
+  </ul>
+  <p>私のスキルは以下の通りです。</p>
+  <ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+  </ul>
+  <p>
+    このサイトはチュートリアルを進めるにつれて更新されていきます。定期的にチェックして、私の旅の様子を見に来てください！
+  </p>
+  <Footer />
+  <script>
+    import "../scripts/menu.js";
+  </script>
+</body>
