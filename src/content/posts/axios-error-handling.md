@@ -2,7 +2,7 @@
 title: "axios 的错误处理"
 description: "Axios 是目前使用最为广泛的 http 请求工具包，在进行错误处理时，基于框架提供的拦截器，我们可以快速的实现错误处理。"
 pubDate: "2021-01-21 08:06:17"
-category: "php"
+category: "life"
 banner: "@images/banners/iE3M7eJ6cg0DAitTpBjxQtnD5ORk9RBTBeUQJ2AL.jpeg"
 tags: ["php"]
 oldViewCount: 9115
